@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FluxClock</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+<link rel="icon" type="image/jpeg" href="clock (1).png">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+    <div class="top-bar">
+
+        <!-- Quote Section -->
+        <div class="quote-box" onclick="changeQuote()">
+            <p id="quoteText">
+                Stay focused and build your future.
+            </p>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo">
+            FluxClock.
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <button onclick="showSection('clock')">Clock</button>
+            <button onclick="showSection('stopwatch')">Stopwatch</button>
+            <button onclick="showSection('timer')">Timer</button>
+            <button onclick="showSection('worldclock')">World Clock</button>
+
+        </div>
+
+    </div>
+    <!-- ================= END TOP BAR ================= -->
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <div class="container">
+
+        <!-- CLOCK SECTION -->
+        <div id="clock" class="section active">
+            <div class="time" id="liveClock">
+                00:00:00 AM
+            </div>
+        </div>
+
+        <!-- STOPWATCH SECTION -->
+        <div id="stopwatch" class="section">
+            <div class="time" id="stopwatchDisplay">
+                00:00:00
+            </div>
+
+            <div class="controls">
+                <button onclick="startStopwatch()">Start</button>
+                <button onclick="pauseStopwatch()">Pause</button>
+                <button onclick="resetStopwatch()">Reset</button>
+            </div>
+        </div>
+
+        <!-- TIMER SECTION -->
+        <div id="timer" class="section">
+
+            <div class="time" id="timerDisplay">
+                00:00:00
+            </div>
+
+            <div class="timer-inputs">
+                <input type="number" id="hours" placeholder="HH">
+                <input type="number" id="minutes" placeholder="MM">
+                <input type="number" id="seconds" placeholder="SS">
+            </div>
+
+            <div class="controls">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="pauseTimer()">Pause</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+
+        </div>
+
+
+
+<!-- WORLD CLOCK SECTION -->
+<div id="worldclock" class="section">
+    <div class="worldclock-container">
+        <div class="worldclock-display">
+            <div id="worldTime" class="time">00:00:00 AM</div>
+            <div id="timezoneDisplay" class="timezone-text">TimeZone</div>
+        </div>
+        <div class="worldclock-inputs">
+            <select id="countrySelect">
+                <option value="">--Select Country--</option>
+                <!-- JS will populate all countries -->
+            </select>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- INFO ICON -->
+<button class="info-btn" onclick="toggleInfo()">i</button>
+
+<!-- INFO POPUP -->
+<div class="info-popup" id="infoPopup">
+    <p>FluxClock is a minimalistic, cozy, and productive clock app featuring a Timer, Stopwatch, World Clock, and quotes to help you stay focused and study efficiently.</p>
+    <hr>
+    <p>Connect with me:</p>
+    <ul class="social-links">
+        <li><a href="https://www.instagram.com/abdullah123455681" target="_blank">Instagram</a></li>
+        
+    </ul>
+</div>
+        <!-- END TIMER SECTION -->
+
+    </div>
+    <!-- ================= END MAIN CONTENT ================= -->
+
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+  <!-- FULLSCREEN BUTTON -->
+<div class="fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">
+    ⛶
+</div>
+
+</body>
+</html>
